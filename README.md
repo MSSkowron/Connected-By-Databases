@@ -14,7 +14,7 @@ Aplikacja do organizacji turniejów koszykówki
 ### Skład :
 
 - Skowron Mateusz
-- Kamil Miśkowiec
+- Miśkowiec Kamil
 
 ### Setup:
 
