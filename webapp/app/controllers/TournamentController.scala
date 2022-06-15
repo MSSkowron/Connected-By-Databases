@@ -73,17 +73,15 @@ class TournamentController @Inject()(cc: ControllerComponents) extends AbstractC
             val game_Date: String = args("date").head 
             val game_refereeID: String = args("refereeID").head 
 
-            val game_scorers: Seq[String] = Seq() 
-            if(args.contains("scorers[]")){
-                game_scorers :++ args("scorers[]")
-            }
+            var game_scorers: Seq[String] = Seq()
+
             val dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm")
             val d: Date = dateFormat.parse(game_Date)
 
             game.result = game_result
             game.date = d 
             game.refereeID = game_refereeID
-            game.scorers = game_scorers
+            game.scorers = args("scorers[]")
             
             Http.HttpRequestHandler.updateGame(game)
 

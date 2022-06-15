@@ -3,7 +3,7 @@ import com.typesafe.sbt.packager.docker.DockerPermissionStrategy
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
   .settings(
-    name := """lacza-nas-bazy""",
+    name := """laczy-nas-scala""",
     organization := "com.example",
     version := "1.0-SNAPSHOT",
     scalaVersion := "2.13.8",
